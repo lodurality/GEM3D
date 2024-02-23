@@ -1,5 +1,901 @@
-<h1>Test</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEM3D: Generative Medial Abstractions for 3D Shape Synthesis </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GEM3D: Generative Medial Abstractions for 3D Shape Synthesis</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://lodurality.github.io/">Dmitry Petrov</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/pradyumn-goyal/">Pradyumn Goyal</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://vikastmz.github.io/">Vikas Thamizharasan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.vovakim.com/">Vova Kim</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://mgadelha.me/">Matheus Gadelha</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://melinos.github.io/">Melinos Averkiou</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cse.iitb.ac.in/~sidch/">Siddhartha Chaudhuri</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Massachusetts, Amherst</span>
+            <span class="author-block"><sup>2</sup>Adobe Research</span>
+            <span class="author-block"><sup>3</sup>University of Cyprus</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="XXX"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="XXX"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="XXX"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="XXX"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<div class="sketchfab-embed-wrapper"> <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8889e3a45cc341e7adacf169dc304850/embed?autospin=1&autostart=1"> 
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <div class="sketchfab-embed-wrapper"> <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8889e3a45cc341e7adacf169dc304850/embed?autospin=1&autostart=1"> 
+      </div>
+
 </div>
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">GEM3D</span> is alright.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+ <section class="wrapper">
+ 
+ <div class="hero-body">
+<div class="container">
+
+<div id="results-carousel" class="carousel results-carousel" data-ride="carousel" data-interval="false">
+      <!-- Indicators -->
+      
+<!-- <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(50px, 2fr)); grid-gap: 10px;"> -->
+<!-- <div style="display: grid; grid-template-areas: 'a b' 'c d'; grid-gap: 10px;"> -->
+
+  <!-- Video 1 -->
+<!--  <div style="display: grid; grid-template-areas: 'a b' 'c d'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;">-->
+   
+   
+   <!-- ELEMENT 1 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_288_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-288-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/f83d4c6a2f894133bd7e72052ec0ab57/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+   <!-- ELEMENT 2 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_81_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-81-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/24fa2f9c4ad840118c611699cbb1e732/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+   <!-- ELEMENT 3 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_161_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-161-1_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/b4a561eed8344d688bfcc22079acb912/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+
+   <!-- ELEMENT 4 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_205_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-205-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/9d559882896e4c45a066b8cc52aaf5e1/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+   <!-- ELEMENT 5 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_92_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-92-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/e131fca3ea514009b5da8de5364c421d/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+
+   <!-- ELEMENT 6 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/03001627_gen_skel_seed_112_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/03001627-112-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/27f7e9496d814a66822154d3c308568a/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+   <!-- ELEMENT 7 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/02691156_gen_skel_seed_187_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/02691156-187-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/e2639c147f8942518b7bc2c0419a546d/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+   <!-- ELEMENT 8 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/04379243_gen_skel_seed_98_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/04379243-98-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/9002130dcd9d486ba4c3f70de726ede8/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+   <!-- ELEMENT 9 -->
+<div>
+<div style="display: grid; grid-template-areas: 'a' 'b'; grid-gap: 2px; background-color: whitesmoke; padding: 5px;"> 
+      <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/teaser/04379243_gen_skel_seed_112_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/teaser/04379243-112-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div></td>
+  </tr>
+  
+</table>
+
+<div>
+      <iframe title="03001627-0-0" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share  src="https://sketchfab.com/models/d7ebcc1e08d64fac9806650f598c595c/embed?autospin=1&autostart=0"> </iframe>
+      </div>
+    </div>
+     
+      
+</div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">GEM3D</span> generates 3D shapes in two steps: first, it generates medial skeleton (in red); second, it generates surface (in green) following skeleton structure.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+        We introduce <b>GEM3D</b> &mdash; a new deep, topology-aware generative model of 3D shapes. 
+        </p>
+        <p>
+        The key ingredient of our method is a neural skeleton-based representation encoding information on both shape topology and geometry. Through a denoising diffusion probabilistic model, our method first generates skeleton-based representations following the Medial Axis Transform (MAT), then generates surfaces through a skeleton-driven neural implicit formulation. The neural implicit takes into account the topological and geometric information stored in the generated skeleton representations to yield surfaces that are more topologically and geometrically accurate compared to previous neural field formulations. 
+        </p>
+        <p>
+        We discuss applications of our method in shape synthesis and point cloud reconstruction tasks, and evaluate our method both qualitatively and quantitatively. We demonstrate significantly more faithful surface reconstruction and diverse shape generation results compared to the state-of-the-art, also involving challenging scenarios of reconstructing and synthesizing structurally complex, high-genus shape surfaces from Thingi10K and ShapeNet.
+        </p>
+     
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Approach</h2>
+        <div class="content has-text-justified">
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-full-width has-text-justified">
+            <a href="./static/images/arch_website.png"><img src="./static/images/arch_website.png" width="120%"></a>
+            <p><b> GEM3D architecture:</b> starting with 3D Gaussian noise, our model first diffusion stage generates a point-based medial (skeletal) shape representation conditioned on a shape category embedding. Conditioned on this representation, our second diffusion stage generates latent codes capturing shape information around the medial points. In the last stage, our surface decoder decodes the medial latent codes and points to local neural implicit surface representations, which are then aggregated to create an output 3D shape.</p>
+          </div>
+        </div>
+            
+          </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Surface sampling</h2>
+        <div class="content has-text-justified">
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-full-width has-text-justified">
+            
+                  <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_42/03001627_gen_skel_seed_42_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated skeleton."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_42/03001627-42-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_42/03001627-42-1_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_42/03001627-42-3_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_42/03001627-42-33_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+  </tr>
+  
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_48/03001627_gen_skel_seed_48_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated skeleton."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_48/03001627-48-7_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_48/03001627-48-9_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_48/03001627-48-14_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03001627/skel_seed_48/03001627-48-19_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+  </tr>
+  
+  
+  
+    <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/surf_sampling_variance/02691156/skel_seed_37/02691156_gen_skel_seed_37_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated skeleton."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/02691156/skel_seed_37/02691156-37-5_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/02691156/skel_seed_37/02691156-37-10_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/02691156/skel_seed_37/02691156-37-12_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/02691156/skel_seed_37/02691156-37-6_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+  </tr>
+  
+  
+      <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_4/03636649_gen_skel_seed_4_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated skeleton."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_4/03636649-4-0_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_4/03636649-4-3_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_4/03636649-4-4_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_4/03636649-4-6_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+  </tr>
+  
+  
+        <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_35/03636649_gen_skel_seed_35_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated skeleton."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_35/03636649-35-2_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_35/03636649-35-4_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_35/03636649-35-11_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       <td class="first"> <div>
+      <img width="100%" src="./static/images/surf_sampling_variance/03636649/skel_seed_35/03636649-35-16_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+  </tr>
+  
+</table>
+
+            
+            <p><b>Surface sampling conditioned on generated skeleton.</b> Our model can sample diverse and structurally consistent surfaces from generated skeletons with meaningful variations of local geometries like different cockpits for airplane or different shapes of lamp stands.</p>
+          </div>
+        </div>
+            
+          </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generation from user-modeled skeletons</h2>
+        <div class="content has-text-justified">
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-full-width has-text-justified">
+            
+                  <div>
+      <table class="tab">
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/zero_shot_gen/skel_2_pc_v2/skel_2_pc_v2_sampled_latent_seed_0_render0001.png"
+                 class="interpolation-image"
+                 alt="Skeleton provided by user."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_2_pc_v2/skel_2_pc_v2_surface_seed_5_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_2_pc_v2/skel_2_pc_v2_surface_seed_3_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_2_pc_v2/skel_2_pc_v2_surface_seed_2_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       </tr>
+  
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/zero_shot_gen/skel_3_pc/skel_3_pc_sampled_latent_seed_0_render0001.png"
+                 class="interpolation-image"
+                 alt="Skeleton provided by user."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_3_pc/skel_3_pc_surface_seed_4_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_3_pc/skel_3_pc_surface_seed_3_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/skel_3_pc/skel_3_pc_surface_seed_0_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       </tr>
+
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/zero_shot_gen/eva_plane/joseph_evangelion_plane_sampled_latent_seed_1_render0001.png"
+                 class="interpolation-image"
+                 alt="Skeleton provided by user."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/eva_plane/joseph_evangelion_plane_surface_seed_1_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/eva_plane/joseph_evangelion_plane_surface_seed_3_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/eva_plane/joseph_evangelion_plane_surface_seed_2_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       </tr>
+       
+       
+  <tr>
+    <td class="first"> <div>
+     <img width="100%" src="./static/images/zero_shot_gen/connected_chair/chair_connected_sampled_latent_seed_2_render0001.png"
+                 class="interpolation-image"
+                 alt="Skeleton provided by user."/>
+      </div></td>
+    <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/connected_chair/chair_connected_surface_seed_1_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 1."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/connected_chair/chair_connected_surface_seed_0_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 2."/>
+      </div>
+      </td>
+      
+      <td class="first"> <div>
+      <img width="100%" src="./static/images/zero_shot_gen/connected_chair/chair_connected_surface_seed_2_render0001.png"
+                 class="interpolation-image"
+                 alt="Generated surface sample 3."/>
+      </div>
+      </td>
+      
+       </tr>
+  
+</table>
+
+            
+            <p><b>Surface generation based on user-modeled skeletons.</b> Our model is able to generalize to unseen structures encoded in user-provided skeletons, and produces plausible surface samples from them.</p>
+          </div>
+        </div>
+            
+          </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+<div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Some related Links</h2>
+
+        <div class="content has-text-justified">
+          <p> <b>Shape reconstruction and generation through irregular latents grids of local neural implicits</b>. Our 3D representation can be seen as irregular latent grid that is arranged on medial abstraction (skeleton). This line of work was introduced recently in <a href="https://lity20.github.io/DCCDIF_project_page/">Dynamic Code Clouds</a> and <a href="https://1zb.github.io/3DILG/">3DILG</a> papers have shown that irregular latent grids either dynamically arranged in space (Dynamic Code Clouds) or uniformly sampled on surface (3DILG) provide strong representations that are able to capture fine details of geometry and part articulation. <a href="https://1zb.github.io/3DShape2VecSet/">3DShape2VecSet</a>, a follow-up work for 3DILG, have shown that latents on irregular latent grid don't need to have an associated 3D position and also introduced strong latent diffusion model based on <a href="https://arxiv.org/abs/2206.00364">EDM diffusion approach</a>.  
+           
+          </p>
+          <p>
+          <b>Skeletonization and skeleton-guided surface representation.</b> We draw heavy inspiration from 3D skeletonization, the computation of medial
+            skeletons from a surface representation, that is a <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12865">well-studied problem in geometry processing</a>. Our skeleton inference model for shape reconstruction from point clouds is heavily inspired by <a href="https://github.com/kangxue/P2P-NET">P2P-Net</a>. Finally, exciting concurrent work <a href="https://arxiv.org/abs/2310.09395">Medial Skeletal Diagram</a> discusses in great mathematical detail an idea  of 'generalized enveloping primitive', a concept that represents the shape's surface as a directional distance field around the medial axis.     
+            
+          </p>
+          
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{petrov2024gem3d,
+	 title={GEM3D: Generative Medial Abstractions for 3D Shape Generation},
+	 author={Dmitry Petrov and Pradyumn Goyal and Vikas Thamizharasan 
+ 		 and Vladimir Kim and Matheus Gadelha and Melinos Averkiou 
+ 		 and Siddhartha Chaudhuri and Evangelos Kalogerakis},
+ 	 journal={arXiv},
+	 year={2023}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            
+      	  <p>
+              The code of this website is heavily based on a template of awesome <a href="https://nerfies.github.io/">Nerfies project</a>. We appreciate the effort that went into design of <a href="https://github.com/nerfies/nerfies.github.io?tab=readme-ov-file">the template</a> and authors' willingness to share it with the community.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

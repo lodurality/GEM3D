@@ -440,7 +440,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">GEM3D</span> generates 3D shapes in two steps: first, it generates medial skeleton (in red); second, it generates surface (in green) following skeleton structure.
+        <span class="dnerf">GEM3D</span> generates 3D shapes in two steps: first, it generates medial skeleton (in red); second, it generates surface (in green) following the skeleton structure.
       </h2>
     </div>
   </div>
@@ -498,7 +498,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Surface sampling</h2>
+        <h2 class="title is-3">Surface sampling from skeleton</h2>
         <div class="content has-text-justified">
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-full-width has-text-justified">
@@ -687,7 +687,7 @@
 </table>
 
             
-            <p><b>Surface sampling conditioned on generated skeleton.</b> Our model can sample diverse and structurally consistent surfaces from generated skeletons with meaningful variations of local geometries like different cockpits for airplane or different shapes of lamp stands.</p>
+            <p><b>Surface sampling conditioned on generated skeleton.</b> From a practical point of view, one possibility of our method for users is to execute our first diffusion stage, obtain various shape structures represented in their MATs, then select the one matching their target structure or topology goals more. Then the user can execute the second stage to obtain various shape alternatives conforming to the given structure. Above, we show a generated skeletons and diverse surfaces conforming to them. For example, our method can generate diverse lamp stands from a table lamp structure or chairs of diverse part thicknesses conforming to a particular chair structure. </p>
           </div>
         </div>
             

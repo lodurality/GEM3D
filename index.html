@@ -69,14 +69,14 @@
               <a href="https://www.cse.iitb.ac.in/~sidch/">Siddhartha Chaudhuri</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>1</sup>
+              <a href="https://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a><sup>1</sup><sup>3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Massachusetts, Amherst</span>
+            <span class="author-block"><sup>1</sup>UMass Amherst</span>
             <span class="author-block"><sup>2</sup>Adobe Research</span>
-            <span class="author-block"><sup>3</sup>University of Cyprus</span>
+            <span class="author-block"><sup>3</sup>CYENS CoE</span>
           </div>
 
           <div class="column has-text-centered">
@@ -832,7 +832,7 @@
 </table>
 
             
-            <p><b>Surface generation based on user-modeled skeletons.</b> Our model is able to generalize to unseen structures encoded in user-provided skeletons, and produces plausible surface samples from them.</p>
+            <p><b>Surface generation based on user-modeled skeletons.</b> We asked two artists to draw the skeletons of completely fictional objects using 3D B-spline curves and patches. We uniformly sampled points from these skeletons and provided them as input to out method. It was still able to generate diverse surfaces conforming to these out-of-distribution skeletons, as shown above. </p>
           </div>
         </div>
             
@@ -844,28 +844,6 @@
     </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-<div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Some related Links</h2>
-
-        <div class="content has-text-justified">
-          <p> <b>Shape reconstruction and generation through irregular latents grids of local neural implicits</b>. Our 3D representation can be seen as irregular latent grid that is arranged on medial abstraction (skeleton). This line of work was introduced recently in <a href="https://lity20.github.io/DCCDIF_project_page/">Dynamic Code Clouds</a> and <a href="https://1zb.github.io/3DILG/">3DILG</a> papers have shown that irregular latent grids either dynamically arranged in space (Dynamic Code Clouds) or uniformly sampled on surface (3DILG) provide strong representations that are able to capture fine details of geometry and part articulation. <a href="https://1zb.github.io/3DShape2VecSet/">3DShape2VecSet</a>, a follow-up work for 3DILG, have shown that latents on irregular latent grid don't need to have an associated 3D position and also introduced strong latent diffusion model based on <a href="https://arxiv.org/abs/2206.00364">EDM diffusion approach</a>.  
-           
-          </p>
-          <p>
-          <b>Skeletonization and skeleton-guided surface representation.</b> We draw heavy inspiration from 3D skeletonization, the computation of medial
-            skeletons from a surface representation, that is a <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12865">well-studied problem in geometry processing</a>. Our skeleton inference model for shape reconstruction from point clouds is heavily inspired by <a href="https://github.com/kangxue/P2P-NET">P2P-Net</a>. Finally, exciting concurrent work <a href="https://arxiv.org/abs/2310.09395">Medial Skeletal Diagram</a> discusses in great mathematical detail an idea  of 'generalized enveloping primitive', a concept that represents the shape's surface as a directional distance field around the medial axis.     
-            
-          </p>
-          
-        </div>
-      </div>
-    </div>
-
-</div>
 
 </section>
 <section class="section" id="BibTeX">
@@ -889,7 +867,7 @@
           <div class="content has-text-centered">
             
       	  <p>
-              The code of this website is heavily based on a template of awesome <a href="https://nerfies.github.io/">Nerfies project</a>. We appreciate the effort that went into design of <a href="https://github.com/nerfies/nerfies.github.io?tab=readme-ov-file">the template</a> and authors' willingness to share it with the community.  
+              The code of this website is heavily based on a template of <a href="https://nerfies.github.io/">Nerfies project</a>. We appreciate the effort that went into design of <a href="https://github.com/nerfies/nerfies.github.io?tab=readme-ov-file">the template</a> and authors' willingness to share it with the community.  
             </p>
           </div>
         </div>
